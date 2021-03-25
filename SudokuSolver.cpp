@@ -57,9 +57,9 @@ bool solveSudoku(int grid[9][9]) {
 			if (solveSudoku(grid)) {
 				return true;
 			}
-			grid[i][j] = 0;
 		}
 	}
+	grid[i][j] = 0;
 
 	return false;
 }
