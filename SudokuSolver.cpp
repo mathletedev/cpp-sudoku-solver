@@ -33,6 +33,7 @@ bool checkValid(int grid[9][9], int i, int j, int val) {
 }
 
 void printGrid(int grid[9][9]) {
+	cout << "\r" << "Finished! " << endl;
 	for (int i = 0; i < 9; ++i) {
 		for (int j = 0; j < 9; ++j) {
 			cout << grid[i][j] << " ";
@@ -65,6 +66,7 @@ bool solveSudoku(int grid[9][9]) {
 
 
 int main() {
+	cout << "Please enter the Sudoku grid:" << endl;
 	int grid[9][9];
 
 	for (int i = 0; i < 9; ++i) {
@@ -74,5 +76,6 @@ int main() {
 	}
 	
 	cout << endl;
+	cout << "Solving...";
 	solveSudoku(grid);
 }
