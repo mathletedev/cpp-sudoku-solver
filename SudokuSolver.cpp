@@ -37,8 +37,14 @@ void printGrid(int grid[9][9]) {
 	for (int i = 0; i < 9; ++i) {
 		for (int j = 0; j < 9; ++j) {
 			cout << grid[i][j] << " ";
+			if (j == 2 || j == 5) {
+				cout << "| ";
+			}
 		}
 		cout << endl;
+		if (i == 2 || i == 5) {
+			cout << "---------------------" << endl;
+		}
 	}
 }
 
@@ -78,4 +84,6 @@ int main() {
 	cout << endl;
 	cout << "Solving...";
 	solveSudoku(grid);
+
+	return 0;
 }
